@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Home = () => {
   const styles = {
     container: {
@@ -84,7 +83,7 @@ const Home = () => {
 
         {/* Buttons */}
         <div style={styles.buttonGroup}>
-          <a href="/Kritika-Resume.pdf" download>
+          <a href="/Kritika Neupane.pdf" download>
             <button style={{ ...styles.btn, ...styles.primaryBtn }}>
               Download Resume
             </button>

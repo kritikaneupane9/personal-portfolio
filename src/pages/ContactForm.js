@@ -52,39 +52,36 @@ const ContactForm = () => {
       padding: '3rem 2rem',
       display: 'flex',
       flexDirection: 'column',
-      gap: '1.5rem',
+      gap: '1.2rem',
       borderTopRightRadius: '12px',
       borderBottomRightRadius: '12px',
       boxShadow: 'inset 0 0 8px rgba(0,0,0,0.05)',
     },
     label: {
       fontWeight: '700',
-      marginBottom: '0.5rem',
+      marginBottom: '0.3rem',
       display: 'block',
-      fontSize: '1rem',
+      fontSize: '0.95rem',
       color: '#243b3b',
     },
     input: {
       width: '100%',
-      padding: '0.75rem 1rem',
-      fontSize: '1rem',
-      borderRadius: '8px',
-      border: '1.5px solid #243b3b',
+      padding: '0.5rem 0.75rem',
+      fontSize: '0.95rem',
+      borderRadius: '6px',
+      border: '1.2px solid #243b3b',
       outline: 'none',
       color: '#243b3b',
       fontWeight: '500',
       transition: 'border-color 0.3s ease',
     },
-    inputFocus: {
-      borderColor: '#86c232',
-    },
     textarea: {
       width: '100%',
-      minHeight: '100px',
-      padding: '0.75rem 1rem',
-      fontSize: '1rem',
-      borderRadius: '8px',
-      border: '1.5px solid #24243e',
+      minHeight: '60px',
+      padding: '0.5rem 0.75rem',
+      fontSize: '0.95rem',
+      borderRadius: '6px',
+      border: '1.2px solid #24243e',
       outline: 'none',
       resize: 'vertical',
       color: '#24243e',
@@ -92,22 +89,22 @@ const ContactForm = () => {
       transition: 'border-color 0.3s ease',
     },
     button: {
-      width: '120px',
-      padding: '0.75rem',
+      width: '100px',
+      padding: '0.5rem',
       background: 'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)',
       color: '#f2f1e7',
       fontWeight: '700',
-      fontSize: '1rem',
-      borderRadius: '12px',
+      fontSize: '0.9rem',
+      borderRadius: '10px',
       border: 'none',
       cursor: 'pointer',
-      boxShadow: '0 6px 10px rgba(36,59,59,0.4)',
+      boxShadow: '0 4px 8px rgba(36,59,59,0.4)',
       alignSelf: 'flex-start',
       transition: 'background-color 0.3s ease',
     },
     buttonHover: {
       backgroundColor: '#86c232',
-      boxShadow: '0 6px 10px rgba(134,194,50,0.6)',
+      boxShadow: '0 4px 10px rgba(134,194,50,0.6)',
     },
   };
 
@@ -128,18 +125,15 @@ const ContactForm = () => {
     <div style={styles.pageContainer}>
       <div style={styles.container}>
         <div style={styles.leftSide}>
-          <h1 style={styles.heading}>Get In Touch !</h1>
+          <h1 style={styles.heading}>Get In Touch!</h1>
           <p style={styles.subheading}>
             Fill out the form and I will reach out, as soon as possible!
           </p>
           <img
-  style={styles.illustration}
-  src="https://cdn-icons-png.flaticon.com/512/4712/4712034.png"
-  alt="Support agent illustration"
-/>
-
-  
-
+            style={styles.illustration}
+            src="https://cdn-icons-png.flaticon.com/512/4712/4712034.png"
+            alt="Support agent illustration"
+          />
         </div>
 
         <form style={styles.rightSide} onSubmit={handleSubmit}>
@@ -160,7 +154,7 @@ const ContactForm = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="youremail@meow.com"
+            placeholder="youremail@example.com"
             value={formData.email}
             onChange={handleChange}
             required
@@ -179,7 +173,7 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            style={buttonHover ? {...styles.button, ...styles.buttonHover} : styles.button}
+            style={buttonHover ? { ...styles.button, ...styles.buttonHover } : styles.button}
             onMouseEnter={() => setButtonHover(true)}
             onMouseLeave={() => setButtonHover(false)}
           >

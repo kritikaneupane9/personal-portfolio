@@ -3,78 +3,62 @@ import React from 'react';
 const Navbar = () => {
   return (
     <>
-      <style>{`
-        .navbar {
-          position: fixed;
-          top: 0;
-          width: 100%;
-          background: linear-gradient(to right, #fceff9, #e9f4fb); /* Soft pink to light blue */
-          color: #333;
-          padding: 1rem 0;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          z-index: 999;
-        }
+      <nav className="navbar">
+        <h1 className="logo">KN</h1>
 
-        .navbar-container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 2rem;
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+        .navbar {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          padding: 16px 32px;
+          background: 'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)',color: '#fff',
+          
+          font-family: Arial, sans-serif;
         }
 
         .logo {
-          font-size: 1.8rem;
+          font-family: 'Dancing Script', cursive;
+          font-size: 32px;
           font-weight: bold;
-          color: #b288c0; /* Soft purple */
+          color: #26494d;
+          letter-spacing: 2px;
         }
 
         .nav-links {
-          list-style: none;
           display: flex;
-          gap: 2rem;
+          gap: 24px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
         }
 
-        .nav-links a {
-          color: #4a4a4a;
+        .nav-links li a {
+          color: #26494d;
           text-decoration: none;
-          font-size: 1.1rem;
-          transition: color 0.3s ease;
+          font-weight: 600;
+          padding: 8px 12px;
+          border-radius: 4px;
+          transition: background-color 0.3s, color 0.3s;
         }
 
-        .nav-links a:hover {
-          color: #b288c0; /* Hover matches logo color */
-        }
-
-
-        @media (max-width: 768px) {
-          .nav-links {
-            gap: 1rem;
-            font-size: 1rem;
-          }
-
-          .logo {
-            font-size: 1.5rem;
-          }
+        .nav-links li a:hover {
+          background-color: #ff8c00;
+          color: white;
         }
       `}</style>
-
-      <nav className="navbar">
-        <div className="navbar-container">
-          <h1 className="logo">Kritika</h1>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
     </>
   );
 };
 
 export default Navbar;
-
-
