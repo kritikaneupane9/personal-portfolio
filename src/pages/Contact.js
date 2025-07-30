@@ -76,7 +76,7 @@ const Contact = () => {
     },
   };
 
-  // Hover effect handlers
+  
   const handleMouseEnter = (e) => {
     e.currentTarget.style.backgroundColor = '#ff4f81';
     e.currentTarget.style.color = '#fff';
