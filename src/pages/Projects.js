@@ -60,22 +60,22 @@ const Projects = () => {
   return (
     <div style={styles.container} id="projects">
       <h2 style={styles.heading}>My Projects</h2>
-      <p style={styles.subtitle}>Here are some of the projects I've worked on recently.</p>
+      <p style={styles.subtitle}>Here is a featured project I've recently built.</p>
 
       <div
         style={styles.card}
         onMouseOver={(e) => Object.assign(e.currentTarget.style, styles.cardHover)}
         onMouseOut={(e) => Object.assign(e.currentTarget.style, styles.card)}
       >
-        <h3 style={styles.projectTitle}>Real-Time Chat App</h3>
+        <h3 style={styles.projectTitle}>Personal Portfolio Website</h3>
         <p style={styles.description}>
-          A real-time chat application built using React and Python Flask. It supports live messaging,
-          authentication, and clean responsive UI. It’s a great example of full-stack collaboration.
+          A responsive portfolio website built with React.js and custom CSS to showcase my skills, projects, and contact info. Designed with a modern layout and smooth interactions.
         </p>
         <a
-          href="https://github.com/kritikaneupane9/react-chat-app"
+          href="https://github.com/kritikaneupane9/personal-portfolio"
           rel="noopener noreferrer"
           style={styles.link}
+          target="_blank"
         >
           View on GitHub →
         </a>
@@ -85,4 +85,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

@@ -69,7 +69,7 @@ const About = () => {
   };
 
   const skills = [
-    {name:'html',icon: '/skills/html.png' },
+    {name:'Html',icon: '/skills/html.png' },
     { name: 'CSS', icon: '/skills/css.png' },
     { name: 'JavaScript', icon: '/skills/js.png' },
     {name:'React', icon: '/skills/react.png'},
